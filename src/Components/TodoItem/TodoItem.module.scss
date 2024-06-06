@@ -1,0 +1,35 @@
+.todoItem {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #ededed;
+  font-size: 24px;
+
+  &.completed .task {
+    text-decoration: line-through;
+    color: #d9d9d9;
+  }
+
+  .checkbox {
+    .ant-checkbox-inner {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner {
+      background-color: #5dc2af;
+      border-color: #5dc2af;
+    }
+    .ant-checkbox-checked::after {
+      border: none;
+    }
+    .ant-checkbox-checked .ant-checkbox-inner::after {
+      transform: rotate(45deg) scale(1) translate(-50%, -50%);
+      top: 50%;
+      left: 50%;
+    }
+  }
+  .task {
+    margin-left: 16px;
+  }
+}
